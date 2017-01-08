@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewAutentificareTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewAutentificareLabel_id}"/>
+                    <h:outputText value="#{autentificareController.selected.id}" title="#{bundle.ViewAutentificareTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewAutentificareLabel_nume}"/>
+                    <h:outputText value="#{autentificareController.selected.nume}" title="#{bundle.ViewAutentificareTitle_nume}"/>
+                    <h:outputText value="#{bundle.ViewAutentificareLabel_prenume}"/>
+                    <h:outputText value="#{autentificareController.selected.prenume}" title="#{bundle.ViewAutentificareTitle_prenume}"/>
+                    <h:outputText value="#{bundle.ViewAutentificareLabel_parola}"/>
+                    <h:outputText value="#{autentificareController.selected.parola}" title="#{bundle.ViewAutentificareTitle_parola}"/>
+                    <h:outputText value="#{bundle.ViewAutentificareLabel_isAdminRol}"/>
+                    <h:outputText value="#{autentificareController.selected.isAdminRol}" title="#{bundle.ViewAutentificareTitle_isAdminRol}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{autentificareController.destroyAndView}" value="#{bundle.ViewAutentificareDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewAutentificareEditLink}"/>
+                <br />
+                <h:commandLink action="#{autentificareController.prepareCreate}" value="#{bundle.ViewAutentificareCreateLink}" />
+                <br />
+                <h:commandLink action="#{autentificareController.prepareList}" value="#{bundle.ViewAutentificareShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewAutentificareIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
