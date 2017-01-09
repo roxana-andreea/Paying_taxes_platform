@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+  
+    <h:head>
+        <title>Plata taxe</title>
+        <style type="text/css">
+            h1{
+                text-align:$align;
+                padding:30px 0px 0px 0px;
+                font:25px Oswald;
+                color:#FFF;
+                text-transform:uppercase;
+                text-shadow:#000 0px 1px 5px;
+                margin:0px;
+            }
+            p{
+                font:13px Open Sans;
+                color:#6E6E6E;
+                text-shadow:#000 0px 1px 5px;
+                margin-bottom:30px;
+            }
+
+        </style>
+    </h:head>
+    <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)">
+        <h1 align="center">Autentificare</h1>
+        <p align="center"><strong>Pentru a putea realiza platile, va rugam sa va creati un cont pentru a va autentifica.</strong></p>
+        <h:form>
+
+
+
+            <h:outputLabel for="nume" style="color:#EAEDED; margin-left: 40%">Nume:     </h:outputLabel>
+            <h:inputText id="nume" required="true" style = "color:#6E6E6E; margin-left: 2%" value="#{autentificareController.selected.nume}"></h:inputText>
+            <br /><br />
+            <h:outputLabel for="prenume" style="color:#EAEDED; margin-left: 40%">Prenume:</h:outputLabel>
+            <h:inputText id="prenume" required="true" style = "color:#6E6E6E; margin-left: 1%" value="#{autentificareController.selected.prenume}"></h:inputText>
+             <br /><br />
+            <h:outputLabel for="parola" style="color:#EAEDED; margin-left: 40%">Parola:</h:outputLabel>
+            <h:inputSecret id="parola" required="true" style = "color:#6E6E6E; margin-left: 2.2%" value="#{autentificareController.selected.parola}"></h:inputSecret>
+            <!-- <br /><br />
+           <h:selectOneRadio value="#{autentificareController.selected.rol}" required="false" style="color:#EAEDED; margin-left: 41%">
+                <f:selectItem itemValue="utilizator" itemLabel="Utilizator" />
+                
+                <f:selectItem itemValue="administrator" itemLabel="Administrator" />                                
+            </h:selectOneRadio>
+            <h:outputLabel for="rol" style="color:#EAEDED; margin-left: 40%">Rol:</h:outputLabel>
+            <h:inputSecret id="rol" required="true" style = "color:#6E6E6E; margin-left: 2.2%" value="#{autentificareController.selected.rol}"></h:inputSecret>
+            -->
+            <br /><br />
+            <h:commandButton id="submit" class="submit" style="margin-left: 44%; width:150px; padding:15px;
+                             border-radius:5px;
+                             @include disable;
+                             background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
+                             background-image: -webkit-linear-gradient(#28D2DE 0%, #1A878F 100%);
+                             background-image: -moz-linear-gradient(#28D2DE 0%, #1A878F 100%);
+                             background-image: -o-linear-gradient(#28D2DE 0%, #1A878F 100%);
+                             background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+                             font:14px Oswald;
+                             color:#FFF;
+                             text-transform:uppercase;
+                             text-shadow:#000 0px 1px 5px;
+                             border:1px solid #000;
+                             opacity:0.7;
+                             -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+                             -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+                             box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+                             border-top:1px solid rgba(255,255,255,0.8)!important;
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Autentificare" action="#{autentificareController.gotoinformatii}"/>
+        </h:form>
+        <br />
+        <br />
+    </h:body>
+</html>
+
