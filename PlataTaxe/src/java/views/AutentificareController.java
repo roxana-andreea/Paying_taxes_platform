@@ -87,14 +87,16 @@ public class AutentificareController implements Serializable {
     }
 
     public String create() {
+        
         try {
+            //current.setId(54);
             getFacade().create(current);
             JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("AutentificareCreated"));
-            System.out.print("corect");
+            //System.out.print("corect");
             return prepareCreate();
         } catch (Exception e) {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
-            System.out.print("incorect");
+            //System.out.print("incorect");
             return null;
         }
     }

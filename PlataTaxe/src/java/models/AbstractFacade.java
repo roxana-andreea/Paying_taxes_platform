@@ -73,10 +73,6 @@ public void create(T entity) {
         javax.persistence.Query q = getEntityManager().createQuery(cq);
         return ((Long) q.getSingleResult()).intValue();
     }
-    @PreDestroy
-    public void destruct()
-    {
-        getEntityManager().close();
-    }
+   
     
 }
