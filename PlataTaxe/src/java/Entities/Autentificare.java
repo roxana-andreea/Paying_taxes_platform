@@ -35,6 +35,15 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Autentificare.findByCnp", query = "SELECT a FROM Autentificare a WHERE a.cnp = :cnp")})
 public class Autentificare implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    @Id
+    
+    //@NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+    
+    
     @Size(max = 30)
     @Column(name = "parola")
     private String parola;
@@ -43,34 +52,27 @@ public class Autentificare implements Serializable {
     @Column(name = "CNP")
     private String cnp;
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @Basic(optional = false)
-    //@NotNull
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Integer id;
     @Size(max = 30)
     @Column(name = "nume")
     private String nume;
+    
     @Size(max = 30)
     @Column(name = "prenume")
     private String prenume;
-    @Size(max = 30)
-
+    
 
     public Autentificare() {
     }
 
-    public Autentificare(Integer id) {
+    public Autentificare(Long id) {
         this.id = id;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -95,7 +97,7 @@ public class Autentificare implements Serializable {
     }
 
     public void setCnp(String cnp) {
-        this.cnp =cnp;
+        this.cnp = cnp;
     }
     
     public String getParola() {

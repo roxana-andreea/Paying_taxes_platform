@@ -26,8 +26,9 @@
         </style>
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)">
-        <h1 align="center">Autentificare</h1>
-        <p align="center"><strong>Pentru a putea realiza platile, va rugam sa va creati un cont pentru a va autentifica.</strong></p>
+        <h1 align="center">Autentificare administrator</h1>
+        <!--<p align="center"><strong>Pentru a putea realiza platile, va rugam sa va creati un cont pentru a va autentifica.</strong></p>
+       -->
         <h:form>
 
 
@@ -40,17 +41,9 @@
              <br /><br />
             <h:outputLabel for="parola" style="color:#EAEDED; margin-left: 40%">Parola:</h:outputLabel>
             <h:inputSecret id="parola" required="true" style = "color:#6E6E6E; margin-left: 2.2%" value="#{autentificareController.selected.parola}"></h:inputSecret>
-            <!-- <br /><br />
-           <h:selectOneRadio value="#{autentificareController.selected.rol}" required="false" style="color:#EAEDED; margin-left: 41%">
-                <f:selectItem itemValue="utilizator" itemLabel="Utilizator" />
-                
-                <f:selectItem itemValue="administrator" itemLabel="Administrator" />                                
-            </h:selectOneRadio>
-            <h:outputLabel for="rol" style="color:#EAEDED; margin-left: 40%">Rol:</h:outputLabel>
-            <h:inputSecret id="rol" required="true" style = "color:#6E6E6E; margin-left: 2.2%" value="#{autentificareController.selected.rol}"></h:inputSecret>
-            -->
+          
             <br /><br />
-            <h:commandButton id="submit" class="submit" style="margin-left: 44%; width:150px; padding:15px;
+            <h:commandButton id="submit-admin" class="submit" style="margin-left: 44%; width:150px; padding:15px;
                              border-radius:5px;
                              @include disable;
                              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));

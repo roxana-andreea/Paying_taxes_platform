@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewPlataCITitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewPlataCILabel_nume}"/>
+                    <h:outputText value="#{plataCIController.selected.nume}" title="#{bundle.ViewPlataCITitle_nume}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_prenume}"/>
+                    <h:outputText value="#{plataCIController.selected.prenume}" title="#{bundle.ViewPlataCITitle_prenume}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_prenume_tata}"/>
+                    <h:outputText value="#{plataCIController.selected.prenume_tata}" title="#{bundle.ViewPlataCITitle_prenume_tata}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_prenume_mama}"/>
+                    <h:outputText value="#{plataCIController.selected.prenume_mama}" title="#{bundle.ViewPlataCITitle_prenume_mama}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_cnp}"/>
+                    <h:outputText value="#{plataCIController.selected.cnp}" title="#{bundle.ViewPlataCITitle_cnp}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_oras_natal}"/>
+                    <h:outputText value="#{plataCIController.selected.oras_natal}" title="#{bundle.ViewPlataCITitle_oras_natal}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_judet_natal}"/>
+                    <h:outputText value="#{plataCIController.selected.judet_natal}" title="#{bundle.ViewPlataCITitle_judet_natal}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_zi_nastere}"/>
+                    <h:outputText value="#{plataCIController.selected.zi_nastere}" title="#{bundle.ViewPlataCITitle_zi_nastere}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_luna_nastere}"/>
+                    <h:outputText value="#{plataCIController.selected.luna_nastere}" title="#{bundle.ViewPlataCITitle_luna_nastere}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_an_nastere}"/>
+                    <h:outputText value="#{plataCIController.selected.an_nastere}" title="#{bundle.ViewPlataCITitle_an_nastere}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_oras_actual}"/>
+                    <h:outputText value="#{plataCIController.selected.oras_actual}" title="#{bundle.ViewPlataCITitle_oras_actual}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_judet_actual}"/>
+                    <h:outputText value="#{plataCIController.selected.judet_actual}" title="#{bundle.ViewPlataCITitle_judet_actual}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_strada}"/>
+                    <h:outputText value="#{plataCIController.selected.strada}" title="#{bundle.ViewPlataCITitle_strada}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_nr_strada}"/>
+                    <h:outputText value="#{plataCIController.selected.nr_strada}" title="#{bundle.ViewPlataCITitle_nr_strada}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_bloc}"/>
+                    <h:outputText value="#{plataCIController.selected.bloc}" title="#{bundle.ViewPlataCITitle_bloc}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_scara}"/>
+                    <h:outputText value="#{plataCIController.selected.scara}" title="#{bundle.ViewPlataCITitle_scara}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_etaj}"/>
+                    <h:outputText value="#{plataCIController.selected.etaj}" title="#{bundle.ViewPlataCITitle_etaj}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_apartament}"/>
+                    <h:outputText value="#{plataCIController.selected.apartament}" title="#{bundle.ViewPlataCITitle_apartament}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_cetatenie}"/>
+                    <h:outputText value="#{plataCIController.selected.cetatenie}" title="#{bundle.ViewPlataCITitle_cetatenie}"/>
+                    <h:outputText value="#{bundle.ViewPlataCILabel_id}"/>
+                    <h:outputText value="#{plataCIController.selected.id}" title="#{bundle.ViewPlataCITitle_id}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{plataCIController.destroyAndView}" value="#{bundle.ViewPlataCIDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewPlataCIEditLink}"/>
+                <br />
+                <h:commandLink action="#{plataCIController.prepareCreate}" value="#{bundle.ViewPlataCICreateLink}" />
+                <br />
+                <h:commandLink action="#{plataCIController.prepareList}" value="#{bundle.ViewPlataCIShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewPlataCIIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

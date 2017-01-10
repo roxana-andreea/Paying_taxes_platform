@@ -1,18 +1,15 @@
 package views;
 
-import Entities.Autentificare;
+import Entities.PlataCI;
 import views.util.JsfUtil;
 import views.util.PaginationHelper;
-import models.AutentificareFacade;
+import models.PlataCIFacade;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.ResourceBundle;
 import javax.ejb.EJB;
-import javax.ejb.EJBException;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
-
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
@@ -21,34 +18,29 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
-
-
-
-
-@Named("autentificareController")
+@Named("plataCIController")
 @SessionScoped
+public class PlataCIController implements Serializable {
 
-public class AutentificareController implements Serializable {
-
-    private Autentificare current;
+    private PlataCI current;
     private DataModel items = null;
     @EJB
-    private models.AutentificareFacade ejbFacade;
+    private models.PlataCIFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 
-    public AutentificareController() {
+    public PlataCIController() {
     }
 
-    public Autentificare getSelected() {
+    public PlataCI getSelected() {
         if (current == null) {
-            current = new Autentificare();
+            current = new PlataCI();
             selectedItemIndex = -1;
         }
         return current;
     }
 
-    private AutentificareFacade getFacade() {
+    private PlataCIFacade getFacade() {
         return ejbFacade;
     }
 
@@ -76,38 +68,33 @@ public class AutentificareController implements Serializable {
     }
 
     public String prepareView() {
-        current = (Autentificare) getItems().getRowData();
+        current = (PlataCI) getItems().getRowData();
         selectedItemIndex = pagination.getPageFirstItem() + getItems().getRowIndex();
         return "View";
     }
 
     public String prepareCreate() {
-       // current = new Autentificare();
-       // selectedItemIndex = -1;
-        return "plata_taxe";
+        current = new PlataCI();
+        selectedItemIndex = -1;
+        return "Create";
     }
 
     public String create() {
-        
         try {
-            //current.setId(54);
             getFacade().create(current);
-            JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("AutentificareCreated"));
+            JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("PlataCICreated"));
             System.out.print("corect");
             return prepareCreate();
-            //return gotoplatataxe();      
+            
         } catch (Exception e) {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
-            System.out.print("incorect2");
-            //return null;
-            return gotoplatataxe(); 
+            System.out.print("incorect");
+            return null;
         }
-       
     }
-    
 
     public String prepareEdit() {
-        current = (Autentificare) getItems().getRowData();
+        current = (PlataCI) getItems().getRowData();
         selectedItemIndex = pagination.getPageFirstItem() + getItems().getRowIndex();
         return "Edit";
     }
@@ -115,7 +102,7 @@ public class AutentificareController implements Serializable {
     public String update() {
         try {
             getFacade().edit(current);
-            JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("AutentificareUpdated"));
+            JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("PlataCIUpdated"));
             return "View";
         } catch (Exception e) {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
@@ -124,7 +111,7 @@ public class AutentificareController implements Serializable {
     }
 
     public String destroy() {
-        current = (Autentificare) getItems().getRowData();
+        current = (PlataCI) getItems().getRowData();
         selectedItemIndex = pagination.getPageFirstItem() + getItems().getRowIndex();
         performDestroy();
         recreatePagination();
@@ -148,7 +135,7 @@ public class AutentificareController implements Serializable {
     private void performDestroy() {
         try {
             getFacade().remove(current);
-            JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("AutentificareDeleted"));
+            JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("PlataCIDeleted"));
         } catch (Exception e) {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
         }
@@ -204,21 +191,21 @@ public class AutentificareController implements Serializable {
         return JsfUtil.getSelectItems(ejbFacade.findAll(), true);
     }
 
-    public Autentificare getAutentificare(java.lang.Long id) {
+    public PlataCI getPlataCI(java.lang.Long id) {
         return ejbFacade.find(id);
     }
 
-    @FacesConverter(forClass = Autentificare.class)
-    public static class AutentificareControllerConverter implements Converter {
+    @FacesConverter(forClass = PlataCI.class)
+    public static class PlataCIControllerConverter implements Converter {
 
         @Override
         public Object getAsObject(FacesContext facesContext, UIComponent component, String value) {
             if (value == null || value.length() == 0) {
                 return null;
             }
-            AutentificareController controller = (AutentificareController) facesContext.getApplication().getELResolver().
-                    getValue(facesContext.getELContext(), null, "autentificareController");
-            return controller.getAutentificare(getKey(value));
+            PlataCIController controller = (PlataCIController) facesContext.getApplication().getELResolver().
+                    getValue(facesContext.getELContext(), null, "plataCIController");
+            return controller.getPlataCI(getKey(value));
         }
 
         java.lang.Long getKey(String value) {
@@ -233,64 +220,19 @@ public class AutentificareController implements Serializable {
             return sb.toString();
         }
 
-          @Override
+        @Override
         public String getAsString(FacesContext facesContext, UIComponent component, Object object) {
             if (object == null) {
                 return null;
             }
-            if (object instanceof Autentificare) {
-                Autentificare o = (Autentificare) object;
+            if (object instanceof PlataCI) {
+                PlataCI o = (PlataCI) object;
                 return getStringKey(o.getId());
             } else {
-                throw new IllegalArgumentException("object " + object + " is of type " + object.getClass().getName() + "; expected type: "+Autentificare.class.getName());
+                throw new IllegalArgumentException("object " + object + " is of type " + object.getClass().getName() + "; expected type: " + PlataCI.class.getName());
             }
         }
 
     }
-    
-    public String gotoautentificare() {
-       return "autentificare";
-    }
-    
-    public String gotoplatataxe() {
-       return "plata_taxe";
-    }
-    
-    
-    public String gotoinformatii()  {
-        List<Autentificare> users = ejbFacade.findAll();
-        
-        for (Autentificare user : users) {
-            if(user != null){
-                if (user.getNume().equals(current.getNume()) && 
-                    user.getPrenume().equals(current.getPrenume()) &&
-                    user.getParola().equals(current.getParola()) &&
-                        user.getCnp() == null)
-
-                    //JsfUtil.addSuccessMessage("V-ați autentificat cu succes.");
-                     //return "plata_taxe";
-             
-                    System.out.println("corect");
-                    return "informatii";
-        }
-        
-        }
-        //JsfUtil.addErrorMessage("Numele de utilizator și/sau parola sunt greșite.");
-        System.out.println("incorect");
-        return "autentificare_administrator";
-    }
-    
-    
-
-
-
-public String gotoautentificareadministrator() {
-       return "autentificare_administrator";
-    }
-
-public String gotoutilizatorinformatii() {
-       return "utilizator_informatii";
-    }
 
 }
-

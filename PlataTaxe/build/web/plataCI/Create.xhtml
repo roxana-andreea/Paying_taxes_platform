@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreatePlataCITitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_nume}" for="nume" />
+                    <h:inputText id="nume" value="#{plataCIController.selected.nume}" title="#{bundle.CreatePlataCITitle_nume}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_prenume}" for="prenume" />
+                    <h:inputText id="prenume" value="#{plataCIController.selected.prenume}" title="#{bundle.CreatePlataCITitle_prenume}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_prenume_tata}" for="prenume_tata" />
+                    <h:inputText id="prenume_tata" value="#{plataCIController.selected.prenume_tata}" title="#{bundle.CreatePlataCITitle_prenume_tata}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_prenume_mama}" for="prenume_mama" />
+                    <h:inputText id="prenume_mama" value="#{plataCIController.selected.prenume_mama}" title="#{bundle.CreatePlataCITitle_prenume_mama}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_cnp}" for="cnp" />
+                    <h:inputText id="cnp" value="#{plataCIController.selected.cnp}" title="#{bundle.CreatePlataCITitle_cnp}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_oras_natal}" for="oras_natal" />
+                    <h:inputText id="oras_natal" value="#{plataCIController.selected.oras_natal}" title="#{bundle.CreatePlataCITitle_oras_natal}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_judet_natal}" for="judet_natal" />
+                    <h:inputText id="judet_natal" value="#{plataCIController.selected.judet_natal}" title="#{bundle.CreatePlataCITitle_judet_natal}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_zi_nastere}" for="zi_nastere" />
+                    <h:inputText id="zi_nastere" value="#{plataCIController.selected.zi_nastere}" title="#{bundle.CreatePlataCITitle_zi_nastere}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_luna_nastere}" for="luna_nastere" />
+                    <h:inputText id="luna_nastere" value="#{plataCIController.selected.luna_nastere}" title="#{bundle.CreatePlataCITitle_luna_nastere}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_an_nastere}" for="an_nastere" />
+                    <h:inputText id="an_nastere" value="#{plataCIController.selected.an_nastere}" title="#{bundle.CreatePlataCITitle_an_nastere}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_oras_actual}" for="oras_actual" />
+                    <h:inputText id="oras_actual" value="#{plataCIController.selected.oras_actual}" title="#{bundle.CreatePlataCITitle_oras_actual}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_judet_actual}" for="judet_actual" />
+                    <h:inputText id="judet_actual" value="#{plataCIController.selected.judet_actual}" title="#{bundle.CreatePlataCITitle_judet_actual}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_strada}" for="strada" />
+                    <h:inputText id="strada" value="#{plataCIController.selected.strada}" title="#{bundle.CreatePlataCITitle_strada}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_nr_strada}" for="nr_strada" />
+                    <h:inputText id="nr_strada" value="#{plataCIController.selected.nr_strada}" title="#{bundle.CreatePlataCITitle_nr_strada}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_bloc}" for="bloc" />
+                    <h:inputText id="bloc" value="#{plataCIController.selected.bloc}" title="#{bundle.CreatePlataCITitle_bloc}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_scara}" for="scara" />
+                    <h:inputText id="scara" value="#{plataCIController.selected.scara}" title="#{bundle.CreatePlataCITitle_scara}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_etaj}" for="etaj" />
+                    <h:inputText id="etaj" value="#{plataCIController.selected.etaj}" title="#{bundle.CreatePlataCITitle_etaj}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_apartament}" for="apartament" />
+                    <h:inputText id="apartament" value="#{plataCIController.selected.apartament}" title="#{bundle.CreatePlataCITitle_apartament}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_cetatenie}" for="cetatenie" />
+                    <h:inputText id="cetatenie" value="#{plataCIController.selected.cetatenie}" title="#{bundle.CreatePlataCITitle_cetatenie}" />
+                    <h:outputLabel value="#{bundle.CreatePlataCILabel_id}" for="id" />
+                    <h:inputText id="id" value="#{plataCIController.selected.id}" title="#{bundle.CreatePlataCITitle_id}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{plataCIController.create}" value="#{bundle.CreatePlataCISaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{plataCIController.prepareList}" value="#{bundle.CreatePlataCIShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreatePlataCIIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
