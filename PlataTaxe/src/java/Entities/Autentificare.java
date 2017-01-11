@@ -32,7 +32,12 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Autentificare.findByNume", query = "SELECT a FROM Autentificare a WHERE a.nume = :nume")
     , @NamedQuery(name = "Autentificare.findByPrenume", query = "SELECT a FROM Autentificare a WHERE a.prenume = :prenume")
     , @NamedQuery(name = "Autentificare.findByParola", query = "SELECT a FROM Autentificare a WHERE a.parola = :parola")
-    , @NamedQuery(name = "Autentificare.findByCnp", query = "SELECT a FROM Autentificare a WHERE a.cnp = :cnp")})
+    , @NamedQuery(name = "Autentificare.findByCnp", query = "SELECT a FROM Autentificare a WHERE a.cnp = :cnp")
+    , @NamedQuery(name = "Autentificare.findByNumecard", query = "SELECT a FROM Autentificare a WHERE a.nume_card = :nume_card")
+    , @NamedQuery(name = "Autentificare.findByNumarcard", query = "SELECT a FROM Autentificare a WHERE a.numar_card = :numar_card")
+    , @NamedQuery(name = "Autentificare.findByLunaexpirare", query = "SELECT a FROM Autentificare a WHERE a.luna_expirare = :luna_expirare")
+    , @NamedQuery(name = "Autentificare.findByAnexpirare", query = "SELECT a FROM Autentificare a WHERE a.an_expirare = :an_expirare")
+    , @NamedQuery(name = "Autentificare.findByCvc", query = "SELECT a FROM Autentificare a WHERE a.cvc = :cvc")})
 public class Autentificare implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -59,6 +64,66 @@ public class Autentificare implements Serializable {
     @Size(max = 30)
     @Column(name = "prenume")
     private String prenume;
+    
+    @Size(max = 30)
+    @Column(name = "nume_card")
+    private String nume_card;
+    
+    @Size(max = 30)
+    @Column(name = "numar_card")
+    private String numar_card;
+    
+    @Size(max = 30)
+    @Column(name = "luna_expirare")
+    private String luna_expirare;
+    
+    @Size(max = 30)
+    @Column(name = "an_expirare")
+    private String an_expirare;
+
+    public String getNume_card() {
+        return nume_card;
+    }
+
+    public void setNume_card(String nume_card) {
+        this.nume_card = nume_card;
+    }
+
+    public String getNumar_card() {
+        return numar_card;
+    }
+
+    public void setNumar_card(String numar_card) {
+        this.numar_card = numar_card;
+    }
+
+    public String getLuna_expirare() {
+        return luna_expirare;
+    }
+
+    public void setLuna_expirare(String luna_expirare) {
+        this.luna_expirare = luna_expirare;
+    }
+
+    public String getAn_expirare() {
+        return an_expirare;
+    }
+
+    public void setAn_expirare(String an_expirare) {
+        this.an_expirare = an_expirare;
+    }
+
+    public String getCvc() {
+        return cvc;
+    }
+
+    public void setCvc(String cvc) {
+        this.cvc = cvc;
+    }
+    
+    @Size(max = 30)
+    @Column(name = "cvc")
+    private String cvc;
     
 
     public Autentificare() {

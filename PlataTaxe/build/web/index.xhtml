@@ -8,8 +8,10 @@ and open the template in the editor.
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
+    
     <h:head>
-        <title>Plata Taxe</title>
+        
+        <title>Plată taxe</title>
         <h:outputStylesheet name="css/jsfcrud.css"/>
         <style type="text/css">
             h1{
@@ -24,6 +26,7 @@ and open the template in the editor.
             }
             h2{
                 font:19px O;
+                margin-left: 15%;
                 color:#FFF;
                 text-shadow:#000 0px 1px 5px;
                 margin-bottom:30px;
@@ -37,21 +40,20 @@ and open the template in the editor.
                 margin-left: 20px;
                 font-family: "Times New Roman", serif;
             }
-
-
         </style>
-
     </h:head>
+    
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
-        <h1 >Plata taxe online.</h1>
+        
+        <h1 >Plată taxe online</h1>
         <br/>
-        <h2>Va rugam sa bifati optiunea care va reprezinta:</h2>
+        <h2>Vă rugăm să alegeți opțiunea care vă reprezintă:</h2>
         <br/>
 
         <h:form>
-
+            <br/>
             <h:commandButton id="button" class="submit" style=" width:150px; padding:5px;
-                             margin-left: 100px;
+                             margin-left: 44%;
                              border-radius:5px;
                              @include disable;
                              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
@@ -73,7 +75,7 @@ and open the template in the editor.
             <br/>
             <br/>
             <h:commandButton id="submit" class="submit" style=" width:150px; padding:5px;
-                             margin-left: 100px;
+                             margin-left: 44%;
                              border-radius:5px;
                              @include disable;
                              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
@@ -92,24 +94,6 @@ and open the template in the editor.
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
                              -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Administrator" action="#{autentificareController.gotoautentificareadministrator}"/>
-
-
-
-
         </h:form>
-
-        <br />
-
-        <br />
-
     </h:body>
-
-
-
-
-
-
-
-
-
 </html>

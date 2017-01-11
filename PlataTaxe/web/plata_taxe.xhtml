@@ -9,7 +9,7 @@ and open the template in the editor.
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
-        <title>Plata Taxe</title>
+        <title>Alegere taxe</title>
         <h:outputStylesheet name="css/jsfcrud.css"/>
         <style type="text/css">
             h1{
@@ -43,14 +43,14 @@ and open the template in the editor.
 
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
-        <h1 >Plata taxe online.</h1>
+        <h1 >Plată taxe online.</h1>
         <br/>
-        <h2>Va rugam sa bifati optiunea care va reprezinta:</h2>
+        <h2>Vă rugăm să alegeți opțiunea dorită:</h2>
         <br/>
 
         <h:form>
 
-            <h:commandButton id="submit1" class="submit" style=" width:200px; padding:5px;
+            <h:commandButton id="submit1" class="submit" style=" width:250px; padding:5px;
                              margin-left: 200px;
                              border-radius:5px;
                              @include disable;
@@ -69,13 +69,13 @@ and open the template in the editor.
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plata taxa eliberare CI" action="#{autentificareController.gotoplataCI}"/>
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plată taxă eliberare CI" action="#{autentificareController.gotoplataCI}"/>
             
             
             
             <br/>
             <br/>
-            <h:commandButton id="submit2" class="submit" style=" width:200px; padding:5px;
+            <h:commandButton id="submit2" class="submit" style=" width:250px; padding:5px;
                              margin-left: 200px;
                              border-radius:5px;
                              @include disable;
@@ -94,10 +94,10 @@ and open the template in the editor.
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plata taxa eliberare pasaport" action="#{autentificareController.gotoplatapasaport}"/>
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plată taxă eliberare pașaport" action="#{autentificareController.gotoplatapasaport}"/>
 <br/>
             <br/>
-            <h:commandButton id="submit3" class="submit" style=" width:200px; padding:5px;
+            <h:commandButton id="submit3" class="submit" style=" width:250px; padding:5px;
                              margin-left: 200px;
                              border-radius:5px;
                              @include disable;
@@ -116,10 +116,10 @@ and open the template in the editor.
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Platataxa permis auto" action="#{autentificareController.gotoplatapermis}"/>
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plată taxă permis auto" action="#{autentificareController.gotoplatapermis}"/>
 <br/>
             <br/>
-            <h:commandButton id="submit4" class="submit" style=" width:200px; padding:5px;
+            <h:commandButton id="submit4" class="submit" style=" width:250px; padding:5px;
                              margin-left: 200px;
                              border-radius:5px;
                              @include disable;
@@ -138,10 +138,10 @@ and open the template in the editor.
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plata taxa de inmatriculare" action="#{autentificareController.gotoplatainmatriculare}"/>
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plată taxă de înmatriculare" action="#{autentificareController.gotoplatainmatriculare}"/>
 <br/>
             <br/>
-            <h:commandButton id="submit5" class="submit" style=" width:200px; padding:5px;
+            <h:commandButton id="submit5" class="submit" style=" width:250px; padding:5px;
                              margin-left: 200px;
                              border-radius:5px;
                              @include disable;
@@ -160,11 +160,12 @@ and open the template in the editor.
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plata rovinieta" action="#{autentificareController.gotoplatarovinieta}"/>
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plată rovinieta" action="#{autentificareController.gotoplatarovinieta}"/>
 
 
+<br />
 
-
+   
         </h:form>
 
         <br />

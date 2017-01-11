@@ -10,7 +10,7 @@ and open the template in the editor.
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Plata taxa de inmatriculare</title>
+        <title>Plată taxă de înmatriculare</title>
     <style type="text/css">
       
 h1{
@@ -32,58 +32,74 @@ h1{
     </style> 
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
-        <h1 >Plata taxa de inmatriculare</h1>
+        <h1 >Plată taxă de înmatriculare</h1>
         <br /><br />
         <h:form>
-  <p>
-                    Suma de plata e X.
-                </p>
+        <span>
+                    <p>
+                        Taxa de înmatriculare diferă în funcție de tipul acesteia, astfel:
+                        <table border="1" width="40%" align="center">
+                            <tr>
+                                <td align="center" style="color: #28D2DE"><strong> Tip </strong></td>
+                                <td align="center" style = "color:#ffffff"> Provizorie </td>
+                                <td align="center" style = "color:#ffffff"> Definitivă </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #28D2DE"><strong>Taxa </strong></td>
+                                <td align="center" style = "color:#ffffff"> 15 RON</td>
+                                <td align="center" style = "color:#ffffff"> 38 RON</td>
+
+                            </tr>
+                        </table>
+
+                    </p>
+                </span>
            <h:panelGrid columns="2">
 
-            <h:outputLabel for="tip_inmatriculare" style="color:#EAEDED">Tip inmatriculare:</h:outputLabel>
+            <h:outputLabel for="tip_inmatriculare" style="color:#EAEDED">Tip înmatriculare:*</h:outputLabel>
             <h:inputText id="tip_inmatriculare" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.tip_inmatriculare}"></h:inputText>
 
-            <h:outputLabel for="serie_sasiu" style="color:#EAEDED">Serie sasiu:</h:outputLabel>
+            <h:outputLabel for="serie_sasiu" style="color:#EAEDED">Serie șasiu:*</h:outputLabel>
             <h:inputText id="serie_sasiu" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.serie_sasiu}"></h:inputText>
 
 
-         <h:outputLabel for="nume2" style="color:#EAEDED">           Nume:</h:outputLabel>
+         <h:outputLabel for="nume2" style="color:#EAEDED">           Nume:*</h:outputLabel>
             <h:inputText id="nume2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.nume}"></h:inputText>
           
 
-            <h:outputLabel for="prenume2" style="color:#EAEDED">        Prenume:</h:outputLabel>
+            <h:outputLabel for="prenume2" style="color:#EAEDED">        Prenume:*</h:outputLabel>
             <h:inputText id="prenume2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.prenume}"></h:inputText>
             
 
-         <h:outputLabel for="oras_actual2" style="color:#EAEDED">    Oras actual:</h:outputLabel>
+         <h:outputLabel for="oras_actual2" style="color:#EAEDED">    Oraș actual:*</h:outputLabel>
             <h:inputText id="oras_actual2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.oras_actual}"></h:inputText>
             
 
-            <h:outputLabel for="judet_actual2" style="color:#EAEDED">   Judet actual:</h:outputLabel>
+            <h:outputLabel for="judet_actual2" style="color:#EAEDED">   Județ actual:*</h:outputLabel>
             <h:inputText id="judet_actual2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.judet_actual}"></h:inputText>
             
 
-            <h:outputLabel for="strada2" style="color:#EAEDED">         Strada:</h:outputLabel>
+            <h:outputLabel for="strada2" style="color:#EAEDED">         Strada:*</h:outputLabel>
             <h:inputText id="strada2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.strada}"></h:inputText>
        
 
-         <h:outputLabel for="nr_strada2" style="color:#EAEDED">            Nr.:</h:outputLabel>
+         <h:outputLabel for="nr_strada2" style="color:#EAEDED">            Nr.:*</h:outputLabel>
             <h:inputText id="nr_strada2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.nr_strada}"></h:inputText>
             
 
-            <h:outputLabel for="bloc2" style="color:#EAEDED">             Bl:</h:outputLabel>
+            <h:outputLabel for="bloc2" style="color:#EAEDED">             Bl:*</h:outputLabel>
             <h:inputText id="bloc2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.bloc}"></h:inputText>
         
 
-            <h:outputLabel for="scara2" style="color:#EAEDED">             Sc:</h:outputLabel>
+            <h:outputLabel for="scara2" style="color:#EAEDED">             Sc:*</h:outputLabel>
             <h:inputText id="scara2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.scara}"></h:inputText>
             
 
-            <h:outputLabel for="etaj2" style="color:#EAEDED">             Et:</h:outputLabel>
+            <h:outputLabel for="etaj2" style="color:#EAEDED">             Et:*</h:outputLabel>
             <h:inputText id="etaj2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.etaj}"></h:inputText>
             
 
-            <h:outputLabel for="apartament2" style="color:#EAEDED">             Ap:</h:outputLabel>
+            <h:outputLabel for="apartament2" style="color:#EAEDED">             Ap:*</h:outputLabel>
             <h:inputText id="apartament2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.apartament}"></h:inputText>
            
 
@@ -107,7 +123,7 @@ h1{
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plateste1" action="#{plataInmatriculareController.create}"/>      
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Efectuează plata" action="#{plataInmatriculareController.create}"/>      
          -
         </h:form>
         

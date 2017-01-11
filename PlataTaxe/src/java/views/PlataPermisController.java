@@ -74,9 +74,9 @@ public class PlataPermisController implements Serializable {
     }
 
     public String prepareCreate() {
-        current = new PlataPermis();
+        //current = new PlataPermis();
         selectedItemIndex = -1;
-        return "Create";
+        return "info_plata_permis";
     }
 
     public String create() {
@@ -86,7 +86,7 @@ public class PlataPermisController implements Serializable {
             return prepareCreate();
         } catch (Exception e) {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
-            return null;
+            return "info_plata_permis";
         }
     }
 

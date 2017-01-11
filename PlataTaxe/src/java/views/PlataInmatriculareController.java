@@ -74,9 +74,9 @@ public class PlataInmatriculareController implements Serializable {
     }
 
     public String prepareCreate() {
-        current = new PlataInmatriculare();
+        //current = new PlataInmatriculare();
         selectedItemIndex = -1;
-        return "Create";
+        return "info_plata_inmatriculare";
     }
 
     public String create() {
@@ -86,7 +86,7 @@ public class PlataInmatriculareController implements Serializable {
             return prepareCreate();
         } catch (Exception e) {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
-            return null;
+            return "info_plata_inmatriculare";
         }
     }
 

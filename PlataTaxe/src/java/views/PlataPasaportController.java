@@ -74,9 +74,9 @@ public class PlataPasaportController implements Serializable {
     }
 
     public String prepareCreate() {
-        current = new PlataPasaport();
+        //current = new PlataPasaport();
         selectedItemIndex = -1;
-        return "Create";
+        return "info_plata_pasaport";
     }
 
     public String create() {
@@ -86,7 +86,7 @@ public class PlataPasaportController implements Serializable {
             return prepareCreate();
         } catch (Exception e) {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
-            return null;
+            return "info_plata_pasaport";
         }
     }
 

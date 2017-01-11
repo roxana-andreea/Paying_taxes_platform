@@ -10,7 +10,7 @@ and open the template in the editor.
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Plata taxa eliberare CI</title>
+        <title>Plată taxă eliberare CI</title>
     <style type="text/css">
       
 h1{
@@ -32,85 +32,85 @@ h1{
     </style> 
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
-        <h1 >Plata taxa eliberare CI.</h1>
+        <h1 >Plată taxă eliberare CI</h1>
         <br /><br />
         <h:form>
 
                 <p>
-                    Suma de plata e X.
+                    Veți efectua plata în valoare de <strong>7 RON</strong>.   
                 </p>
            <h:panelGrid columns="2">
- 	    <h:outputLabel for="nume" style="color:#EAEDED">           Nume:</h:outputLabel>
+ 	    <h:outputLabel for="nume" style="color:#EAEDED">           Nume:*</h:outputLabel>
             <h:inputText id="nume" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.nume}"></h:inputText>
           
 
-            <h:outputLabel for="prenume" style="color:#EAEDED">        Prenume:</h:outputLabel>
+            <h:outputLabel for="prenume" style="color:#EAEDED">        Prenume:*</h:outputLabel>
             <h:inputText id="prenume" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.prenume}"></h:inputText>
             
 
-            <h:outputLabel for="prenume_tata" style="color:#EAEDED">   Prenume tata:</h:outputLabel>
+            <h:outputLabel for="prenume_tata" style="color:#EAEDED">   Prenume tată:*</h:outputLabel>
             <h:inputText id="prenume_tata" required="true" style = " color:#6E6E6E" value="#{plataCIController.selected.prenume_tata}"></h:inputText>
             
 
 
-            <h:outputLabel for="prenume_mama" style="color:#EAEDED">   Prenume mama:</h:outputLabel>
+            <h:outputLabel for="prenume_mama" style="color:#EAEDED">   Prenume mamă:*</h:outputLabel>
             <h:inputText id="prenume_mama" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.prenume_mama}"></h:inputText>
           
-            <h:outputLabel for="cnp" style="color:#EAEDED">            CNP:</h:outputLabel>
+            <h:outputLabel for="cnp" style="color:#EAEDED">            CNP:*</h:outputLabel>
             <h:inputText id="cnp" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.cnp}"></h:inputText>
 
-            <h:outputLabel for="oras_natal" style="color:#EAEDED">     Oras natal:</h:outputLabel>
+            <h:outputLabel for="oras_natal" style="color:#EAEDED">     Oraș natal:*</h:outputLabel>
             <h:inputText id="oras_natal" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.oras_natal}"></h:inputText>
        
-            <h:outputLabel for="judet_natal" style="color:#EAEDED">    Judet natal:</h:outputLabel>
+            <h:outputLabel for="judet_natal" style="color:#EAEDED">    Județ natal:*</h:outputLabel>
             <h:inputText id="judet_natal" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.judet_natal}"></h:inputText>
           
 
-            <h:outputLabel for="zi_nastere" style="color:#EAEDED">  Zi de nastere:</h:outputLabel>
+            <h:outputLabel for="zi_nastere" style="color:#EAEDED">  Zi de naștere:*</h:outputLabel>
             <h:inputText id="zi_nastere" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.zi_nastere}"></h:inputText>
            
 
-            <h:outputLabel for="luna_nastere" style="color:#EAEDED">Luna de nastere:</h:outputLabel>
+            <h:outputLabel for="luna_nastere" style="color:#EAEDED">Luna de naștere:*</h:outputLabel>
             <h:inputText id="luna_nastere" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.luna_nastere}"></h:inputText>
             
 
-            <h:outputLabel for="an_nastere" style="color:#EAEDED">  Anul nasterii:</h:outputLabel>
+            <h:outputLabel for="an_nastere" style="color:#EAEDED">  Anul nașterii:*</h:outputLabel>
             <h:inputText id="an_nastere" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.an_nastere}"></h:inputText>
             
 
- 	    <h:outputLabel for="oras_actual" style="color:#EAEDED">    Oras actual:</h:outputLabel>
+ 	    <h:outputLabel for="oras_actual" style="color:#EAEDED">    Oraș actual:*</h:outputLabel>
             <h:inputText id="oras_actual" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.oras_actual}"></h:inputText>
             
 
-            <h:outputLabel for="judet_actual" style="color:#EAEDED">   Judet actual:</h:outputLabel>
+            <h:outputLabel for="judet_actual" style="color:#EAEDED">   Județ actual:*</h:outputLabel>
             <h:inputText id="judet_actual" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.judet_actual}"></h:inputText>
             
 
-            <h:outputLabel for="strada" style="color:#EAEDED">         Strada:</h:outputLabel>
+            <h:outputLabel for="strada" style="color:#EAEDED">         Strada:*</h:outputLabel>
             <h:inputText id="strada" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.strada}"></h:inputText>
        
 
-	    <h:outputLabel for="nr_strada" style="color:#EAEDED">            Nr.:</h:outputLabel>
+	    <h:outputLabel for="nr_strada" style="color:#EAEDED">            Nr.:*</h:outputLabel>
             <h:inputText id="nr_strada" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.nr_strada}"></h:inputText>
             
 
-            <h:outputLabel for="bloc" style="color:#EAEDED">             Bl:</h:outputLabel>
+            <h:outputLabel for="bloc" style="color:#EAEDED">             Bl:*</h:outputLabel>
             <h:inputText id="bloc" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.bloc}"></h:inputText>
         
 
-            <h:outputLabel for="scara" style="color:#EAEDED">             Sc:</h:outputLabel>
+            <h:outputLabel for="scara" style="color:#EAEDED">             Sc:*</h:outputLabel>
             <h:inputText id="scara" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.scara}"></h:inputText>
             
 
-            <h:outputLabel for="etaj" style="color:#EAEDED">             Et:</h:outputLabel>
+            <h:outputLabel for="etaj" style="color:#EAEDED">             Et:*</h:outputLabel>
             <h:inputText id="etaj" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.etaj}"></h:inputText>
             
 
-            <h:outputLabel for="apartament" style="color:#EAEDED">             Ap:</h:outputLabel>
+            <h:outputLabel for="apartament" style="color:#EAEDED">             Ap:*</h:outputLabel>
             <h:inputText id="apartament" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.apartament}"></h:inputText>
            
 
-            <h:outputLabel for="cetatenie" style="color:#EAEDED">      Cetatenie:</h:outputLabel>
+            <h:outputLabel for="cetatenie" style="color:#EAEDED">      Cetățenie:*</h:outputLabel>
             <h:inputText id="cetatenie" required="true" style = "color:#6E6E6E" value="#{plataCIController.selected.cetatenie}"></h:inputText>
             
             </h:panelGrid>
@@ -133,7 +133,7 @@ h1{
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plateste" action="#{plataCIController.create}"/>  
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Efectuează plata" action="#{plataCIController.create}"/>  
             
 
         </h:form>

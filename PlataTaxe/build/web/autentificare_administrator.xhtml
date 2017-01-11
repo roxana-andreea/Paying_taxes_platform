@@ -5,11 +5,11 @@
       xmlns:h="http://java.sun.com/jsf/html">
   
     <h:head>
-        <title>Plata taxe</title>
+        <title>Autentificare administrator</title>
         <style type="text/css">
             h1{
                 text-align:$align;
-                padding:30px 0px 0px 0px;
+                padding:20px 0px 0px 0px;
                 font:25px Oswald;
                 color:#FFF;
                 text-transform:uppercase;
@@ -27,23 +27,21 @@
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)">
         <h1 align="center">Autentificare administrator</h1>
-        <!--<p align="center"><strong>Pentru a putea realiza platile, va rugam sa va creati un cont pentru a va autentifica.</strong></p>
-       -->
+        <br /><br />
         <h:form>
-
-
-
-            <h:outputLabel for="nume" style="color:#EAEDED; margin-left: 40%">Nume:     </h:outputLabel>
-            <h:inputText id="nume" required="true" style = "color:#6E6E6E; margin-left: 2%" value="#{autentificareController.selected.nume}"></h:inputText>
+            <h:outputLabel for="nume" style="color:#EAEDED; margin-left: 40%">Nume:*</h:outputLabel>
+            <h:inputText id="nume" required="true" style = "color:#6E6E6E; margin-left: 2.1%" value="#{autentificareController.selected.nume}"></h:inputText>
             <br /><br />
-            <h:outputLabel for="prenume" style="color:#EAEDED; margin-left: 40%">Prenume:</h:outputLabel>
-            <h:inputText id="prenume" required="true" style = "color:#6E6E6E; margin-left: 1%" value="#{autentificareController.selected.prenume}"></h:inputText>
-             <br /><br />
-            <h:outputLabel for="parola" style="color:#EAEDED; margin-left: 40%">Parola:</h:outputLabel>
-            <h:inputSecret id="parola" required="true" style = "color:#6E6E6E; margin-left: 2.2%" value="#{autentificareController.selected.parola}"></h:inputSecret>
-          
+            
+            <h:outputLabel for="prenume" style="color:#EAEDED; margin-left: 40%">Prenume:*</h:outputLabel>
+            <h:inputText id="prenume" required="true" style = "color:#6E6E6E; margin-left: 0.8%" value="#{autentificareController.selected.prenume}"></h:inputText>
             <br /><br />
-            <h:commandButton id="submit-admin" class="submit" style="margin-left: 44%; width:150px; padding:15px;
+            
+            <h:outputLabel for="parola" style="color:#EAEDED; margin-left: 40%">Parolă:*</h:outputLabel>
+            <h:inputSecret id="parola" required="true" style = "color:#6E6E6E; margin-left: 2%" value="#{autentificareController.selected.parola}"></h:inputSecret>
+            <br /><br />
+            
+            <h:commandButton id="submit-admin" class="submit" style="margin-left: 44%; width:150px; padding:5px;
                              border-radius:5px;
                              @include disable;
                              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
@@ -63,8 +61,6 @@
                              border-top:1px solid rgba(255,255,255,0.8)!important;
                              -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Autentificare" action="#{autentificareController.gotoinformatii}"/>
         </h:form>
-        <br />
-        <br />
     </h:body>
 </html>
 

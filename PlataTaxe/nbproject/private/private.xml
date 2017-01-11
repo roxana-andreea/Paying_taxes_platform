@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/conf/persistence.xml</file>
-            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/java/Entities/Autentificare.java</file>
-            <file>file:/home/rox/NetBeansProjects/PlataTaxe/web/autentificare.xhtml</file>
-            <file>file:/home/rox/NetBeansProjects/PlataTaxe/web/plata_taxe.xhtml</file>
-            <file>file:/home/rox/NetBeansProjects/PlataTaxe/web/index.xhtml</file>
-            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/java/views/AutentificareController.java</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/web/utilizator_informatii.xhtml</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/web/contul_meu.xhtml</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/java/views/PlataPermisController.java</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/java/views/PlataRovinietaController.java</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/web/plata_pasaport.xhtml</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/java/Entities/PlataRovinieta.java</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/web/plata_inmatriculare.xhtml</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/java/views/PlataInmatriculareController.java</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/java/views/PlataPasaportController.java</file>
+            <file>file:/home/rox/NetBeansProjects/PlataTaxe/src/java/views/PlataCIController.java</file>
         </group>
     </open-files>
 </project-private>

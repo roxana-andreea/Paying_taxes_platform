@@ -74,9 +74,9 @@ public class PlataCIController implements Serializable {
     }
 
     public String prepareCreate() {
-        current = new PlataCI();
+        //current = new PlataCI();
         selectedItemIndex = -1;
-        return "Create";
+        return "info_plata_CI";
     }
 
     public String create() {
@@ -89,7 +89,7 @@ public class PlataCIController implements Serializable {
         } catch (Exception e) {
             JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
             System.out.print("incorect");
-            return null;
+            return "info_plata_CI";
         }
     }
 
@@ -234,5 +234,7 @@ public class PlataCIController implements Serializable {
         }
 
     }
-
+    
+    
+    
 }

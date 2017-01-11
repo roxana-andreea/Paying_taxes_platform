@@ -5,7 +5,7 @@
       xmlns:h="http://java.sun.com/jsf/html">
   
     <h:head>
-        <title>Plata taxe</title>
+        <title>Contul meu</title>
         <style type="text/css">
             h1{
                 text-align:$align;
@@ -25,20 +25,38 @@
         </style>
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)">
-        <h1 align="center">Autentificare</h1>
-        <p align="center"><strong>Pentru a putea realiza platile, va rugam sa va creati un cont pentru a va autentifica.</strong></p>
-       <h:form>
-            <h:outputLabel for="nume" style="color:#EAEDED; margin-left: 40%">Nume:     </h:outputLabel>
-            <h:outputText id="nume" style = "color:#6E6E6E; margin-left: 2%" value="#{autentificareController.selected.nume}"></h:outputText>
-            <br /><br />
-            <h:outputLabel for="prenume" style="color:#EAEDED; margin-left: 40%">Prenume:</h:outputLabel>
-            <h:outputText id="prenume" style = "color:#6E6E6E; margin-left: 1%" value="#{autentificareController.selected.prenume}"></h:outputText>
-            <br /><br />
+        <h1 align="center">Contul meu</h1>
+     
+        <h:form>
+        <h:panelGrid columns="2" style="margin-left: 44%">
+            <h:outputLabel for="nume" style="color:#EAEDED">Nume:     </h:outputLabel>
+            <h:outputText id="nume"  style = "color:#6E6E6E" value="#{autentificareController.selected.nume}"></h:outputText>
+            
+            <h:outputLabel for="prenume" style="color:#EAEDED">Prenume:</h:outputLabel>
+            <h:outputText id="prenume"  style = "color:#6E6E6E" value="#{autentificareController.selected.prenume}"></h:outputText>
             
             
-            <h:outputLabel for="cnp" style="color:#EAEDED; margin-left: 40%">CNP:</h:outputLabel>
-            <h:outputText id="cnp" style = "color:#6E6E6E; margin-left: 2.9%" value="#{autentificareController.selected.cnp}"></h:outputText>
+            <h:outputLabel for="cnp" style="color:#EAEDED">CNP:</h:outputLabel>
+            <h:outputText id="cnp"  style = "color:#6E6E6E" value="#{autentificareController.selected.cnp}"></h:outputText>
             
+           
+            <h:outputLabel for="nume_card" style="color:#EAEDED">Nume card:     </h:outputLabel>
+            <h:outputText id="nume_card"  style = "color:#6E6E6E" value="#{autentificareController.selected.nume_card}"></h:outputText>
+         
+            <h:outputLabel for="numar_card" style="color:#EAEDED">Număr card: </h:outputLabel>
+            <h:outputText id="numar_card"  style = "color:#6E6E6E" value="#{autentificareController.selected.numar_card}"></h:outputText>
+            
+            <h:outputLabel for="luna_expirare" style="color:#EAEDED">Lună expirare: </h:outputLabel>
+            <h:outputText id="luna_expirare"  style = "color:#6E6E6E" value="#{autentificareController.selected.luna_expirare}"></h:outputText>
+            
+            
+            <h:outputLabel for="an_expirare" style="color:#EAEDED">An expirare: </h:outputLabel>
+            <h:outputText id="an_expirare"  style = "color:#6E6E6E" value="#{autentificareController.selected.an_expirare}"></h:outputText>
+            
+           
+            <h:outputLabel for="cvc" style="color:#EAEDED">CVC:    </h:outputLabel>
+            <h:outputText id="cvc"  style = "color:#6E6E6E" value="#{autentificareController.selected.cvc}"></h:outputText>
+                      </h:panelGrid>
             <br /><br />
             <h:commandButton id="back" class="submit" style="margin-left: 44%; width:150px; padding:5px;
                              border-radius:5px;
@@ -58,10 +76,15 @@
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Inapoi" action="#{autentificareController.gotoplatataxe}"/>
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="înapoi" action="#{autentificareController.gotoplatataxe}"/>
         
         <br />
         <br />
+        </h:form>
+                <h:form>
+        <h:commandLink action="#{autentificareController.gotoautentificare}"> 
+                <h:graphicImage value="resources/images/logout.png" style="width:4%; right:0; top:0; position:absolute "/>
+        </h:commandLink>
         </h:form>
     </h:body>
 </html>

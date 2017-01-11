@@ -10,7 +10,7 @@ and open the template in the editor.
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Plata rovinieta</title>
+        <title>Plată rovinieta</title>
     <style type="text/css">
       
 h1{
@@ -32,21 +32,82 @@ h1{
     </style> 
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
-        <h1 >Plata rovinieta</h1>
+        <h1 >Plată rovinieta</h1>
         <br /><br />
         <h:form>
-  <p> Suma de plata e X.    </p>
+ <span>
+                    <p>Tariful de utilizare este structurat în funcție de durata de utilizare a rețelei de drumuri naționale din România (o zi, 30 de zile, 90 de zile, 12 luni).<br />Durata de utilizare cuprinde durata de parcurs, precum și durata de staționare.<br />Prețurile sunt afișate în Euro și conțin TVA.
+                        <table border="1" width="40%" align="center">
+                            <tr>
+                                <td align="center" style="color: #28D2DE"></td>
+                                <td align="center" style="color: #28D2DE">1 zi</td>
+                                <td align="center" style="color: #28D2DE">7 zile</td>
+                                <td align="center" style="color: #28D2DE">30 de zile</td>
+                                <td align="center" style="color: #28D2DE">90 de zile</td>
+                                <td align="center" style="color: #28D2DE">12 luni</td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #28D2DE">A</td>
+                                <td align="center" style = "color:#ffffff">-</td>
+                                <td align="center" style = "color:#ffffff">3</td>
+                                <td align="center" style = "color:#ffffff">7</td>
+                                <td align="center" style = "color:#ffffff">13</td>
+                                <td align="center" style = "color:#ffffff">28</td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #28D2DE">B</td>
+                                <td align="center" style = "color:#ffffff">-</td>
+                                <td align="center" style = "color:#ffffff">6</td>
+                                <td align="center" style = "color:#ffffff">16</td>
+                                <td align="center" style = "color:#ffffff">36</td>
+                                <td align="center" style = "color:#ffffff">96</td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #28D2DE">C</td>
+                                <td align="center" style = "color:#ffffff">4</td>
+                                <td align="center" style = "color:#ffffff">20</td>
+                                <td align="center" style = "color:#ffffff">52</td>
+                                <td align="center" style = "color:#ffffff">120</td>
+                                <td align="center" style = "color:#ffffff">320</td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #28D2DE">D</td>
+                                <td align="center" style = "color:#ffffff">7</td>
+                                <td align="center" style = "color:#ffffff">35</td>
+                                <td align="center" style = "color:#ffffff">91</td>
+                                <td align="center" style = "color:#ffffff">210</td>
+                                <td align="center" style = "color:#ffffff">560</td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #28D2DE">E</td>
+                                <td align="center" style = "color:#ffffff">9</td>
+                                <td align="center" style = "color:#ffffff">45</td>
+                                <td align="center" style = "color:#ffffff">117</td>
+                                <td align="center" style = "color:#ffffff">270</td>
+                                <td align="center" style = "color:#ffffff">720</td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #28D2DE">F</td>
+                                <td align="center" style = "color:#ffffff">11</td>
+                                <td align="center" style = "color:#ffffff">55</td>
+                                <td align="center" style = "color:#ffffff">143</td>
+                                <td align="center" style = "color:#ffffff">374</td>
+                                <td align="center" style = "color:#ffffff">1.210</td>
+                            </tr>
+                        </table>
+                    </p>
+                </span>
                     
            <h:panelGrid columns="2">
                
-         <h:outputLabel for="tip_autoturism" style="color:#EAEDED">Tip autoturism:</h:outputLabel>
+         <h:outputLabel for="tip_autoturism" style="color:#EAEDED">Tip autoturism:*</h:outputLabel>
             <h:inputText id="tip_autoturism" required="true" style = "color:#6E6E6E" value="#{plataRovinietaController.selected.tip_autoturism}"></h:inputText>
           
 
-           <h:outputLabel for="perioada_valabilitate" style="color:#EAEDED">Perioada valabilitate:</h:outputLabel>
+           <h:outputLabel for="perioada_valabilitate" style="color:#EAEDED">Perioadă valabilitate:*</h:outputLabel>
            <h:inputText id="perioada_valabilitate" required="true" style = "color:#6E6E6E" value="#{plataRovinietaController.selected.perioada_valabilitate}"></h:inputText>
            </h:panelGrid>
-                <br /><br /><h:form>
+                <br /><br />
             <h:commandButton id="submit5" class="submit" style="margin-left: 44%; width:150px; padding:5px;
                              border-radius:5px;
                              @include disable;
@@ -65,7 +126,7 @@ h1{
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plateste1" action="#{plataRovinietaController.create}"/>          
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Efectuează plata" action="#{plataRovinietaController.create}"/>          
           
                
         </h:form>

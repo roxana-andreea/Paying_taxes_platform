@@ -9,7 +9,7 @@ and open the template in the editor.
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
-        <title>Plata Taxe</title>
+        <title>Informații</title>
         <h:outputStylesheet name="css/jsfcrud.css"/>
         <style type="text/css">
             h1{
@@ -37,41 +37,31 @@ and open the template in the editor.
                 font-family: "Times New Roman", serif;
                 margin:2px;
             }
-            ul#lista {
-                color: #FFF;
-
-            }
-            ul#lista li {
-                color: #28D2DE;
-                font: 18px O;
-                font-family: "Times New Roman", serif;
-            }
-
         </style>
 
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
-        <h1 align="center" >Buna ziua si bine ati venit pe platforma de plata taxe online.</h1>
+        <h1 align="center" >Bună ziua și bine ați venit pe platforma de plată online a taxelor</h1>
         <br/>
-        <h2>Taxele ce pot fi platite in cadrul acestei platforme sunt:</h2>
+        <h2>Taxele ce pot fi plătite în cadrul acestei platforme sunt:</h2>
 
         <h:form>
             <ul id="lista">
 
-                <li>Plata taxa eliberare CI
+                <li>Plată taxă eliberare CI
                     <br />
                     <span>
                         <p>
-                            Taxa pentru eliberarea unei noi carti de identitate (CI) este de 7 RON, indiferent de motivul emiterii.
+                            Taxa pentru eliberarea unei noi cărți de identitate (CI) este de <strong>7 RON</strong>, indiferent de motivul solicitării emiterii.
                         </p>
                     </span>
 
                 </li>
-                <li>Plata taxa eliberare pasaport  </li>
+                <li>Plată taxă eliberare pașaport  </li>
                 <span>
                     <br />
                     <p>
-                        Taxele privind contravaloarea paşapoartelor difera in functie de perioada de valabilitate după cum urmează:
+                        Taxele privind contravaloarea paşapoartelor diferă în funcție de perioada de valabilitate după cum urmează:
 
                         <table border="1" width="40%" align="center">
                             <tr>
@@ -80,7 +70,7 @@ and open the template in the editor.
                                 <td align="center"> Valabil 5 ani </td>
                             </tr>
                             <tr>
-                                <td align="center" style="color: #28D2DE" ><strong>Taxa </strong></td>
+                                <td align="center" style="color: #28D2DE" ><strong>Taxă </strong></td>
                                 <td align="center">218 RON</td>
                                 <td align="center">280 RON</td>
 
@@ -90,36 +80,36 @@ and open the template in the editor.
                 </span>
 
 
-                <li>Plata taxa permis auto</li>
+                <li>Plată taxă permis auto</li>
                 <span>
                     <p>
-                        Contravaloarea eliberarii permisului auto ce trebuie platita este de 68 RON.
+                        Contravaloarea eliberarii permisului auto ce trebuie plătită este de <strong>68 RON</strong>.
                     </p>
                 </span>
-                <li>Plata taxa de inmatriculare</li>
+                <li>Plată taxă de înmatriculare</li>
                 <span>
                     <p>
-                        Taxa de inmatriculare difera in functie de tipul acesteia, astfel:
+                        Taxa de înmatriculare diferă în funcție de tipul acesteia, astfel:
                         <table border="1" width="40%" align="center">
                             <tr>
                                 <td align="center" style="color: #28D2DE"><strong> Tip </strong></td>
                                 <td align="center"> Provizorie </td>
-                                <td align="center"> Temporara </td>
+                                <td align="center"> Definitivă </td>
                             </tr>
                             <tr>
                                 <td align="center" style="color: #28D2DE"><strong>Taxa </strong></td>
-                                <td align="center"> RON</td>
-                                <td align="center"> RON</td>
+                                <td align="center"> 15 RON</td>
+                                <td align="center"> 38 RON</td>
 
                             </tr>
                         </table>
 
                     </p>
                 </span>
-                <li>Plata taxa rovinieta</li>
+                <li>Plată taxă rovinietă</li>
                 <br />
                 <span>
-                    <p>Tariful de utilizare este structurat in functie de durata de utilizare a retelei de drumuri nationale din Romania ( o zi, 30 de zile, 90 de zile, 12 luni).<br />Durata de utilizare cuprinde durata de parcurs, precum si durata de stationare.<br />Preturile sunt afisate in Euro si contin TVA.
+                    <p>Tariful de utilizare este structurat în funcție de durata de utilizare a rețelei de drumuri naționale din România (o zi, 30 de zile, 90 de zile, 12 luni).<br />Durata de utilizare cuprinde durata de parcurs, precum și durata de staționare.<br />Prețurile sunt afișate în Euro și conțin TVA.
                         <table border="1" width="40%" align="center">
                             <tr>
                                 <td align="center" style="color: #28D2DE"></td>
@@ -183,7 +173,7 @@ and open the template in the editor.
             </ul>
             <br /><br />
             <p>
-                Pentru a putea efectua una sau mai multe plati, trebuie sa va
+            Pentru a putea efectua una sau mai multe plăți, trebuie să vă
 
                 <h:commandButton id="submit" class="submit" style=" width:150px; padding:5px;
                                  border-radius:5px;
@@ -203,15 +193,8 @@ and open the template in the editor.
                                  -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                                  box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                                  border-top:1px solid rgba(255,255,255,0.8)!important;
-                                 -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="autentificati" action="#{autentificareController.gotoautentificare}"/>
-
-
+                                 -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="înregistrați" action="#{autentificareController.gotoautentificare}"/>
             </p>
-
-        </h:form>
-        
+        </h:form>        
     </h:body>
-
-
-
 </html>

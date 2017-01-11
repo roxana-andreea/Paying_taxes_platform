@@ -10,7 +10,7 @@ and open the template in the editor.
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Plata taxa permis auto</title>
+        <title>Plată taxă permis auto</title>
     <style type="text/css">
       
 h1{
@@ -32,42 +32,44 @@ h1{
     </style> 
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
-        <h1 >Plata taxa permis auto</h1>
+        <h1 >Plată taxă permis auto</h1>
         <br /><br />
         <h:form>
- <p>
-                    Suma de plata e X.
-                </p>
+        <span>
+                    <p>
+                        Contravaloarea eliberarii permisului auto ce trebuie plătită este de <strong>68 RON</strong>.
+                    </p>
+                </span>
            <h:panelGrid columns="2">
-         <h:outputLabel for="nume3" style="color:#EAEDED">           Nume:</h:outputLabel>
+         <h:outputLabel for="nume3" style="color:#EAEDED">           Nume:*</h:outputLabel>
             <h:inputText id="nume3" required="true" style = "color:#6E6E6E" value="#{plataPermisController.selected.nume}"></h:inputText>
           
 
-            <h:outputLabel for="prenume3" style="color:#EAEDED">        Prenume:</h:outputLabel>
+            <h:outputLabel for="prenume3" style="color:#EAEDED">        Prenume:*</h:outputLabel>
             <h:inputText id="prenume3" required="true" style = "color:#6E6E6E" value="#{plataPermisController.selected.prenume}"></h:inputText>
             
 
             
           
-            <h:outputLabel for="cnp3" style="color:#EAEDED">            CNP:</h:outputLabel>
+            <h:outputLabel for="cnp3" style="color:#EAEDED">            CNP:*</h:outputLabel>
             <h:inputText id="cnp3" required="true" style = "color:#6E6E6E" value="#{plataPermisController.selected.cnp}"></h:inputText>
 
-            <h:outputLabel for="oras_natal3" style="color:#EAEDED">     Oras natal:</h:outputLabel>
+            <h:outputLabel for="oras_natal3" style="color:#EAEDED">     Oraș natal:*</h:outputLabel>
             <h:inputText id="oras_natal3" required="true" style = "color:#6E6E6E" value="#{plataPermisController.selected.oras_natal}"></h:inputText>
        
-            <h:outputLabel for="judet_natal3" style="color:#EAEDED">    Judet natal:</h:outputLabel>
+            <h:outputLabel for="judet_natal3" style="color:#EAEDED">    Județ natal:*</h:outputLabel>
             <h:inputText id="judet_natal3" required="true" style = "color:#6E6E6E" value="#{plataPermisController.selected.judet_natal}"></h:inputText>
           
 
-            <h:outputLabel for="zi_nastere3" style="color:#EAEDED">  Zi de nastere:</h:outputLabel>
+            <h:outputLabel for="zi_nastere3" style="color:#EAEDED">  Zi de naștere:*</h:outputLabel>
             <h:inputText id="zi_nastere3" required="true" style = "color:#6E6E6E" value="#{plataPermisController.selected.zi_nastere}"></h:inputText>
            
 
-            <h:outputLabel for="luna_nastere3" style="color:#EAEDED">Luna de nastere:</h:outputLabel>
+            <h:outputLabel for="luna_nastere3" style="color:#EAEDED">Luna de naștere:*</h:outputLabel>
             <h:inputText id="luna_nastere3" required="true" style = "color:#6E6E6E" value="#{plataPermisController.selected.luna_nastere}"></h:inputText>
             
 
-            <h:outputLabel for="an_nastere3" style="color:#EAEDED">  Anul nasterii:</h:outputLabel>
+            <h:outputLabel for="an_nastere3" style="color:#EAEDED">  Anul nașterii:*</h:outputLabel>
             <h:inputText id="an_nastere3" required="true" style = "color:#6E6E6E" value="#{plataPermisController.selected.an_nastere}"></h:inputText>
             
 
@@ -92,7 +94,7 @@ h1{
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plateste1" action="#{plataPermisController.create}"/>    
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Efectuează plata" action="#{plataPermisController.create}"/>    
           
         </h:form>
         

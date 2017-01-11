@@ -5,12 +5,46 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>info admin</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Administrator</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <style type="text/css">
+            h1{
+                text-align:$align;
+                padding:30px 0px 0px 0px;
+                font:26px O;
+                color:#FFF;
+                text-shadow:#000 0px 1px 5px;
+                margin:0px;
+                font-family: "Times New Roman", serif;
+
+            }
+            h2{
+                font:17px O;
+                color:#6E6E6E;
+                text-shadow:#000 0px 1px 5px;
+                margin-left: 20px;
+                font-family: "Times New Roman", serif;
+            }
+
+
+        </style>
+
+    </h:head>
+    <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
+        <h1>Plăți înregistrate de către cetățeni</h1>
+       
+                <h:form>
+        <h:commandLink action="#{autentificareController.gotoautentificareadministrator}"> 
+                <h:graphicImage value="resources/images/logout.png" style="width:4%; right:0; top:0; position:absolute "/>
+        </h:commandLink>
+        </h:form>
+        
+    </h:body>
+
+
+
 </html>

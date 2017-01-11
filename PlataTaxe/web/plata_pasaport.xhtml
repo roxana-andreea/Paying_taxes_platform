@@ -10,7 +10,7 @@ and open the template in the editor.
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Plata taxa eliberare pasaport</title>
+        <title>Plată taxă eliberare pașaport</title>
     <style type="text/css">
       
 h1{
@@ -32,91 +32,107 @@ h1{
     </style> 
     </h:head>
     <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
-        <h1 >Plata taxa eliberare pasaport.</h1>
+        <h1 >Plată taxă eliberare pașaport</h1>
         <br /><br />
         <h:form>
 
-                <p>
-                    Suma de plata e X.
-                </p>
+                <span>
+                    <p>
+                        Taxele privind contravaloarea paşapoartelor diferă în funcție de perioada de valabilitate după cum urmează:
+
+                        <table border="1" width="40%" align="center">
+                            <tr>
+                                <td align="center" style="color: #28D2DE"> <strong>Tip </strong></td>
+                                <td align="center" style = "color:#ffffff"> Temporar </td>
+                                <td align="center" style = "color:#ffffff"> Valabil 5 ani </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #28D2DE" ><strong>Taxă </strong></td>
+                                <td align="center" style = "color:#ffffff">218 RON</td>
+                                <td align="center" style = "color:#ffffff">280 RON</td>
+
+                            </tr>
+                        </table>
+                    </p> 
+                </span>
            <h:panelGrid columns="2">
-        <h:outputLabel for="nume1" style="color:#EAEDED">           Nume:</h:outputLabel>
+        <h:outputLabel for="nume1" style="color:#EAEDED">           Nume:*</h:outputLabel>
             <h:inputText id="nume1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.nume}"></h:inputText>
           
 
-            <h:outputLabel for="prenume1" style="color:#EAEDED">        Prenume:</h:outputLabel>
+            <h:outputLabel for="prenume1" style="color:#EAEDED">        Prenume:*</h:outputLabel>
             <h:inputText id="prenume1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.prenume}"></h:inputText>
             
 
-            <h:outputLabel for="prenume_tata1" style="color:#EAEDED">   Prenume tata:</h:outputLabel>
+            <h:outputLabel for="prenume_tata1" style="color:#EAEDED">   Prenume tată:*</h:outputLabel>
             <h:inputText id="prenume_tata1" required="true" style = " color:#6E6E6E" value="#{plataPasaportController.selected.prenume_tata}"></h:inputText>
             
 
 
-            <h:outputLabel for="prenume_mama1" style="color:#EAEDED">   Prenume mama:</h:outputLabel>
+            <h:outputLabel for="prenume_mama1" style="color:#EAEDED">   Prenume mamă:*</h:outputLabel>
             <h:inputText id="prenume_mama1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.prenume_mama}"></h:inputText>
           
-            <h:outputLabel for="cnp1" style="color:#EAEDED">            CNP:</h:outputLabel>
+            <h:outputLabel for="cnp1" style="color:#EAEDED">            CNP:*</h:outputLabel>
             <h:inputText id="cnp1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.cnp}"></h:inputText>
 
-            <h:outputLabel for="oras_natal1" style="color:#EAEDED">     Oras natal:</h:outputLabel>
+            <h:outputLabel for="oras_natal1" style="color:#EAEDED">     Oraș natal:*</h:outputLabel>
             <h:inputText id="oras_natal1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.oras_natal}"></h:inputText>
        
-            <h:outputLabel for="judet_natal1" style="color:#EAEDED">    Judet natal:</h:outputLabel>
+            <h:outputLabel for="judet_natal1" style="color:#EAEDED">    Județ natal:*</h:outputLabel>
             <h:inputText id="judet_natal1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.judet_natal}"></h:inputText>
           
 
-            <h:outputLabel for="zi_nastere1" style="color:#EAEDED">  Zi de nastere:</h:outputLabel>
+            <h:outputLabel for="zi_nastere1" style="color:#EAEDED">  Zi de naștere:*</h:outputLabel>
             <h:inputText id="zi_nastere1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.zi_nastere}"></h:inputText>
            
 
-            <h:outputLabel for="luna_nastere1" style="color:#EAEDED">Luna de nastere:</h:outputLabel>
+            <h:outputLabel for="luna_nastere1" style="color:#EAEDED">Luna de naștere:*</h:outputLabel>
             <h:inputText id="luna_nastere1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.luna_nastere}"></h:inputText>
             
 
-            <h:outputLabel for="an_nastere1" style="color:#EAEDED">  Anul nasterii:</h:outputLabel>
+            <h:outputLabel for="an_nastere1" style="color:#EAEDED">  Anul nasterii:*</h:outputLabel>
             <h:inputText id="an_nastere1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.an_nastere}"></h:inputText>
             
 
-        <h:outputLabel for="oras_actual1" style="color:#EAEDED">    Oras actual:</h:outputLabel>
+        <h:outputLabel for="oras_actual1" style="color:#EAEDED">    Oraș actual:*</h:outputLabel>
             <h:inputText id="oras_actual1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.oras_actual}"></h:inputText>
             
 
-            <h:outputLabel for="judet_actual1" style="color:#EAEDED">   Judet actual:</h:outputLabel>
+            <h:outputLabel for="judet_actual1" style="color:#EAEDED">   Județ actual:*</h:outputLabel>
             <h:inputText id="judet_actual1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.judet_actual}"></h:inputText>
             
 
-            <h:outputLabel for="strada1" style="color:#EAEDED">         Strada:</h:outputLabel>
+            <h:outputLabel for="strada1" style="color:#EAEDED">         Strada:*</h:outputLabel>
             <h:inputText id="strada1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.strada}"></h:inputText>
        
 
-        <h:outputLabel for="nr_strada1" style="color:#EAEDED">            Nr.:</h:outputLabel>
+        <h:outputLabel for="nr_strada1" style="color:#EAEDED">            Nr.:*</h:outputLabel>
             <h:inputText id="nr_strada1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.nr_strada}"></h:inputText>
             
 
-            <h:outputLabel for="bloc1" style="color:#EAEDED">             Bl:</h:outputLabel>
+            <h:outputLabel for="bloc1" style="color:#EAEDED">             Bl:*</h:outputLabel>
             <h:inputText id="bloc1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.bloc}"></h:inputText>
         
 
-            <h:outputLabel for="scara1" style="color:#EAEDED">             Sc:</h:outputLabel>
+            <h:outputLabel for="scara1" style="color:#EAEDED">             Sc:*</h:outputLabel>
             <h:inputText id="scara1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.scara}"></h:inputText>
             
 
-            <h:outputLabel for="etaj1" style="color:#EAEDED">             Et:</h:outputLabel>
+            <h:outputLabel for="etaj1" style="color:#EAEDED">             Et:*</h:outputLabel>
             <h:inputText id="etaj1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.etaj}"></h:inputText>
             
 
-            <h:outputLabel for="apartament1" style="color:#EAEDED">             Ap:</h:outputLabel>
+            <h:outputLabel for="apartament1" style="color:#EAEDED">             Ap:*</h:outputLabel>
             <h:inputText id="apartament1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.apartament}"></h:inputText>
            
 
-            <h:outputLabel for="inaltime1" style="color:#EAEDED">Inaltime</h:outputLabel>
+            <h:outputLabel for="inaltime1" style="color:#EAEDED">Înălțime:*</h:outputLabel>
             <h:inputText id="inaltime1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.inaltime}"></h:inputText>
             
-            <h:outputLabel for="culoare_ochi1" style="color:#EAEDED">Culoarea ochilor:</h:outputLabel>
+            <h:outputLabel for="culoare_ochi1" style="color:#EAEDED">Culoarea ochilor:*</h:outputLabel>
             <h:inputText id="culoare_ochi1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.culoare_ochi}"></h:inputText>
 
-            <h:outputLabel for="tip_pasaport1" style="color:#EAEDED">Tip pasaport:</h:outputLabel>
+            <h:outputLabel for="tip_pasaport1" style="color:#EAEDED">Tip pașaport:*</h:outputLabel>
             <h:inputText id="tip_pasaport1" required="true" style = "color:#6E6E6E" value="#{plataPasaportController.selected.tip_pasaport}"></h:inputText>
 
             </h:panelGrid>
@@ -139,7 +155,7 @@ h1{
                              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
                              border-top:1px solid rgba(255,255,255,0.8)!important;
-                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plateste1" action="#{plataPasaportController.create}"/>          
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Efectuează plata" action="#{plataPasaportController.create}"/>          
           
 
         </h:form>

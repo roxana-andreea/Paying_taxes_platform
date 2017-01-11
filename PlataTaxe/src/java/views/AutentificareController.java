@@ -9,10 +9,8 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.ResourceBundle;
 import javax.ejb.EJB;
-import javax.ejb.EJBException;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
-
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
@@ -21,13 +19,8 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
-
-
-
-
 @Named("autentificareController")
 @SessionScoped
-
 public class AutentificareController implements Serializable {
 
     private Autentificare current;
@@ -81,7 +74,7 @@ public class AutentificareController implements Serializable {
         return "View";
     }
 
-    public String prepareCreate() {
+        public String prepareCreate() {
        // current = new Autentificare();
        // selectedItemIndex = -1;
         return "plata_taxe";
@@ -104,7 +97,6 @@ public class AutentificareController implements Serializable {
         }
        
     }
-    
 
     public String prepareEdit() {
         current = (Autentificare) getItems().getRowData();
@@ -233,7 +225,7 @@ public class AutentificareController implements Serializable {
             return sb.toString();
         }
 
-          @Override
+        @Override
         public String getAsString(FacesContext facesContext, UIComponent component, Object object) {
             if (object == null) {
                 return null;
@@ -242,13 +234,43 @@ public class AutentificareController implements Serializable {
                 Autentificare o = (Autentificare) object;
                 return getStringKey(o.getId());
             } else {
-                throw new IllegalArgumentException("object " + object + " is of type " + object.getClass().getName() + "; expected type: "+Autentificare.class.getName());
+                throw new IllegalArgumentException("object " + object + " is of type " + object.getClass().getName() + "; expected type: " + Autentificare.class.getName());
             }
         }
 
     }
-    
-    public String gotoautentificare() {
+public String gotoautentificareadministrator() {
+       return "autentificare_administrator";
+    }
+
+public String gotoutilizatorinformatii() {
+       return "utilizator_informatii";
+    }
+
+public String gotocontulmeu() {
+       return "contul_meu";
+    }
+public String gotoplataCI() {
+    return "plata_CI";
+}
+
+public String gotoplatapasaport() {
+    return "plata_pasaport";
+}
+
+public String gotoplatapermis() {
+    return "plata_permis";
+}
+
+public String gotoplatainmatriculare() {
+    return "plata_inmatriculare";
+}
+
+public String gotoplatarovinieta() {
+    return "plata_rovinieta";
+}
+
+                             public String gotoautentificare() {
        return "autentificare";
     }
     
@@ -276,44 +298,7 @@ public class AutentificareController implements Serializable {
         
         }
         //JsfUtil.addErrorMessage("Numele de utilizator și/sau parola sunt greșite.");
-        System.out.println("incorect");
+        //System.out.println("incorect");
         return "autentificare_administrator";
-    }
-    
-    
-
-
-
-public String gotoautentificareadministrator() {
-       return "autentificare_administrator";
-    }
-
-public String gotoutilizatorinformatii() {
-       return "utilizator_informatii";
-    }
-
-public String gotocontulmeu() {
-       return "contul_meu";
-    }
-public String gotoplataCI() {
-    return "plata_CI";
+    }        
 }
-
-public String gotoplatapasaport() {
-    return "plata_pasaport";
-}
-
-public String gotoplatapermis() {
-    return "plata_permis";
-}
-
-public String gotoplatainmatriculare() {
-    return "plata_inamtriculare";
-}
-
-public String gotoplatarovinieta() {
-    return "plata_rovinieta";
-}
-
-}
-
