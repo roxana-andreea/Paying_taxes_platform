@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewPlataInmatriculareTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_tip_inmatriculare}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.tip_inmatriculare}" title="#{bundle.ViewPlataInmatriculareTitle_tip_inmatriculare}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_serie_sasiu}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.serie_sasiu}" title="#{bundle.ViewPlataInmatriculareTitle_serie_sasiu}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_nume}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.nume}" title="#{bundle.ViewPlataInmatriculareTitle_nume}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_prenume}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.prenume}" title="#{bundle.ViewPlataInmatriculareTitle_prenume}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_oras_actual}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.oras_actual}" title="#{bundle.ViewPlataInmatriculareTitle_oras_actual}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_judet_actual}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.judet_actual}" title="#{bundle.ViewPlataInmatriculareTitle_judet_actual}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_strada}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.strada}" title="#{bundle.ViewPlataInmatriculareTitle_strada}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_nr_strada}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.nr_strada}" title="#{bundle.ViewPlataInmatriculareTitle_nr_strada}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_bloc}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.bloc}" title="#{bundle.ViewPlataInmatriculareTitle_bloc}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_scara}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.scara}" title="#{bundle.ViewPlataInmatriculareTitle_scara}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_etaj}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.etaj}" title="#{bundle.ViewPlataInmatriculareTitle_etaj}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_apartament}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.apartament}" title="#{bundle.ViewPlataInmatriculareTitle_apartament}"/>
+                    <h:outputText value="#{bundle.ViewPlataInmatriculareLabel_id}"/>
+                    <h:outputText value="#{plataInmatriculareController.selected.id}" title="#{bundle.ViewPlataInmatriculareTitle_id}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{plataInmatriculareController.destroyAndView}" value="#{bundle.ViewPlataInmatriculareDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewPlataInmatriculareEditLink}"/>
+                <br />
+                <h:commandLink action="#{plataInmatriculareController.prepareCreate}" value="#{bundle.ViewPlataInmatriculareCreateLink}" />
+                <br />
+                <h:commandLink action="#{plataInmatriculareController.prepareList}" value="#{bundle.ViewPlataInmatriculareShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewPlataInmatriculareIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

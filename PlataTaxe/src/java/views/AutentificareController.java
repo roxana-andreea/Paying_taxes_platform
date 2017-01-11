@@ -292,5 +292,28 @@ public String gotoutilizatorinformatii() {
        return "utilizator_informatii";
     }
 
+public String gotocontulmeu() {
+       return "contul_meu";
+    }
+public String gotoplataCI() {
+    return "plata_CI";
+}
+
+public String gotoplatapasaport() {
+    return "plata_pasaport";
+}
+
+public String gotoplatapermis() {
+    return "plata_permis";
+}
+
+public String gotoplatainmatriculare() {
+    return "plata_inamtriculare";
+}
+
+public String gotoplatarovinieta() {
+    return "plata_rovinieta";
+}
+
 }
 

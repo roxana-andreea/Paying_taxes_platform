@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListPlataInmatriculareTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListPlataInmatriculareEmpty}" rendered="#{plataInmatriculareController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{plataInmatriculareController.items.rowCount > 0}">
+                    <h:outputText value="#{plataInmatriculareController.pagination.pageFirstItem + 1}..#{plataInmatriculareController.pagination.pageLastItem + 1}/#{plataInmatriculareController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{plataInmatriculareController.previous}" value="#{bundle.Previous} #{plataInmatriculareController.pagination.pageSize}" rendered="#{plataInmatriculareController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{plataInmatriculareController.next}" value="#{bundle.Next} #{plataInmatriculareController.pagination.pageSize}" rendered="#{plataInmatriculareController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{plataInmatriculareController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_tip_inmatriculare}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tip_inmatriculare}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_serie_sasiu}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.serie_sasiu}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_nume}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nume}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_prenume}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.prenume}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_oras_actual}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.oras_actual}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_judet_actual}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.judet_actual}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_strada}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.strada}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_nr_strada}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nr_strada}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_bloc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bloc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_scara}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.scara}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_etaj}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.etaj}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_apartament}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.apartament}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlataInmatriculareTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{plataInmatriculareController.prepareView}" value="#{bundle.ListPlataInmatriculareViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{plataInmatriculareController.prepareEdit}" value="#{bundle.ListPlataInmatriculareEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{plataInmatriculareController.destroy}" value="#{bundle.ListPlataInmatriculareDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{plataInmatriculareController.prepareCreate}" value="#{bundle.ListPlataInmatriculareCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListPlataInmatriculareIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

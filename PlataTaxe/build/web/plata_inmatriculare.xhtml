@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Plata taxa de inmatriculare</title>
+    <style type="text/css">
+      
+h1{
+                
+                padding:30px 0px 0px 0px;
+                font:20px O;
+                color:#FFF;
+                text-shadow:#000 0px 1px 5px;
+                margin:0px;
+            }
+             p{
+                font:19px O;
+                color:#6E6E6E;
+                text-shadow:#000 0px 1px 5px;
+                margin-left: 20px;
+                font-family: "Times New Roman", serif;
+            }
+        
+    </style> 
+    </h:head>
+    <h:body style="background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png)" >
+        <h1 >Plata taxa de inmatriculare</h1>
+        <br /><br />
+        <h:form>
+  <p>
+                    Suma de plata e X.
+                </p>
+           <h:panelGrid columns="2">
+
+            <h:outputLabel for="tip_inmatriculare" style="color:#EAEDED">Tip inmatriculare:</h:outputLabel>
+            <h:inputText id="tip_inmatriculare" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.tip_inmatriculare}"></h:inputText>
+
+            <h:outputLabel for="serie_sasiu" style="color:#EAEDED">Serie sasiu:</h:outputLabel>
+            <h:inputText id="serie_sasiu" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.serie_sasiu}"></h:inputText>
+
+
+         <h:outputLabel for="nume2" style="color:#EAEDED">           Nume:</h:outputLabel>
+            <h:inputText id="nume2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.nume}"></h:inputText>
+          
+
+            <h:outputLabel for="prenume2" style="color:#EAEDED">        Prenume:</h:outputLabel>
+            <h:inputText id="prenume2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.prenume}"></h:inputText>
+            
+
+         <h:outputLabel for="oras_actual2" style="color:#EAEDED">    Oras actual:</h:outputLabel>
+            <h:inputText id="oras_actual2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.oras_actual}"></h:inputText>
+            
+
+            <h:outputLabel for="judet_actual2" style="color:#EAEDED">   Judet actual:</h:outputLabel>
+            <h:inputText id="judet_actual2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.judet_actual}"></h:inputText>
+            
+
+            <h:outputLabel for="strada2" style="color:#EAEDED">         Strada:</h:outputLabel>
+            <h:inputText id="strada2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.strada}"></h:inputText>
+       
+
+         <h:outputLabel for="nr_strada2" style="color:#EAEDED">            Nr.:</h:outputLabel>
+            <h:inputText id="nr_strada2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.nr_strada}"></h:inputText>
+            
+
+            <h:outputLabel for="bloc2" style="color:#EAEDED">             Bl:</h:outputLabel>
+            <h:inputText id="bloc2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.bloc}"></h:inputText>
+        
+
+            <h:outputLabel for="scara2" style="color:#EAEDED">             Sc:</h:outputLabel>
+            <h:inputText id="scara2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.scara}"></h:inputText>
+            
+
+            <h:outputLabel for="etaj2" style="color:#EAEDED">             Et:</h:outputLabel>
+            <h:inputText id="etaj2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.etaj}"></h:inputText>
+            
+
+            <h:outputLabel for="apartament2" style="color:#EAEDED">             Ap:</h:outputLabel>
+            <h:inputText id="apartament2" required="true" style = "color:#6E6E6E" value="#{plataInmatriculareController.selected.apartament}"></h:inputText>
+           
+
+            </h:panelGrid>
+                <br /><br />
+            <h:commandButton id="submit3" class="submit" style="margin-left: 44%; width:150px; padding:5px;
+                             border-radius:5px;
+                             @include disable;
+                             background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
+                             background-image: -webkit-linear-gradient(#28D2DE 0%, #1A878F 100%);
+                             background-image: -moz-linear-gradient(#28D2DE 0%, #1A878F 100%);
+                             background-image: -o-linear-gradient(#28D2DE 0%, #1A878F 100%);
+                             background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+                             font:14px Oswald;
+                             color:#FFF;
+                             text-transform:uppercase;
+                             text-shadow:#000 0px 1px 5px;
+                             border:1px solid #000;
+                             opacity:0.7;
+                             -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+                             -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+                             box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+                             border-top:1px solid rgba(255,255,255,0.8)!important;
+                             -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)))" value="Plateste1" action="#{plataInmatriculareController.create}"/>      
+         -
+        </h:form>
+        
+    </h:body>
+</html>

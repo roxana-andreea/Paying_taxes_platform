@@ -25,13 +25,13 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "PlataCI")
-@XmlRootElement
+
 public class PlataCI implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @Column(name="Id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     @Column(name="nume")

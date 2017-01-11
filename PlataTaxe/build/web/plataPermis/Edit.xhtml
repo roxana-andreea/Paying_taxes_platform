@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditPlataPermisTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_nume}" for="nume" />
+                    <h:inputText id="nume" value="#{plataPermisController.selected.nume}" title="#{bundle.EditPlataPermisTitle_nume}" />
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_prenume}" for="prenume" />
+                    <h:inputText id="prenume" value="#{plataPermisController.selected.prenume}" title="#{bundle.EditPlataPermisTitle_prenume}" />
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_cnp}" for="cnp" />
+                    <h:inputText id="cnp" value="#{plataPermisController.selected.cnp}" title="#{bundle.EditPlataPermisTitle_cnp}" />
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_oras_natal}" for="oras_natal" />
+                    <h:inputText id="oras_natal" value="#{plataPermisController.selected.oras_natal}" title="#{bundle.EditPlataPermisTitle_oras_natal}" />
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_judet_natal}" for="judet_natal" />
+                    <h:inputText id="judet_natal" value="#{plataPermisController.selected.judet_natal}" title="#{bundle.EditPlataPermisTitle_judet_natal}" />
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_zi_nastere}" for="zi_nastere" />
+                    <h:inputText id="zi_nastere" value="#{plataPermisController.selected.zi_nastere}" title="#{bundle.EditPlataPermisTitle_zi_nastere}" />
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_luna_nastere}" for="luna_nastere" />
+                    <h:inputText id="luna_nastere" value="#{plataPermisController.selected.luna_nastere}" title="#{bundle.EditPlataPermisTitle_luna_nastere}" />
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_an_nastere}" for="an_nastere" />
+                    <h:inputText id="an_nastere" value="#{plataPermisController.selected.an_nastere}" title="#{bundle.EditPlataPermisTitle_an_nastere}" />
+                    <h:outputLabel value="#{bundle.EditPlataPermisLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{plataPermisController.selected.id}" title="#{bundle.EditPlataPermisTitle_id}" />
+                </h:panelGrid>
+                <h:commandLink action="#{plataPermisController.update}" value="#{bundle.EditPlataPermisSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditPlataPermisViewLink}"/>
+                <br />
+                <h:commandLink action="#{plataPermisController.prepareList}" value="#{bundle.EditPlataPermisShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditPlataPermisIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

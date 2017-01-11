@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditPlataInmatriculareTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_tip_inmatriculare}" for="tip_inmatriculare" />
+                    <h:inputText id="tip_inmatriculare" value="#{plataInmatriculareController.selected.tip_inmatriculare}" title="#{bundle.EditPlataInmatriculareTitle_tip_inmatriculare}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_serie_sasiu}" for="serie_sasiu" />
+                    <h:inputText id="serie_sasiu" value="#{plataInmatriculareController.selected.serie_sasiu}" title="#{bundle.EditPlataInmatriculareTitle_serie_sasiu}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_nume}" for="nume" />
+                    <h:inputText id="nume" value="#{plataInmatriculareController.selected.nume}" title="#{bundle.EditPlataInmatriculareTitle_nume}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_prenume}" for="prenume" />
+                    <h:inputText id="prenume" value="#{plataInmatriculareController.selected.prenume}" title="#{bundle.EditPlataInmatriculareTitle_prenume}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_oras_actual}" for="oras_actual" />
+                    <h:inputText id="oras_actual" value="#{plataInmatriculareController.selected.oras_actual}" title="#{bundle.EditPlataInmatriculareTitle_oras_actual}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_judet_actual}" for="judet_actual" />
+                    <h:inputText id="judet_actual" value="#{plataInmatriculareController.selected.judet_actual}" title="#{bundle.EditPlataInmatriculareTitle_judet_actual}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_strada}" for="strada" />
+                    <h:inputText id="strada" value="#{plataInmatriculareController.selected.strada}" title="#{bundle.EditPlataInmatriculareTitle_strada}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_nr_strada}" for="nr_strada" />
+                    <h:inputText id="nr_strada" value="#{plataInmatriculareController.selected.nr_strada}" title="#{bundle.EditPlataInmatriculareTitle_nr_strada}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_bloc}" for="bloc" />
+                    <h:inputText id="bloc" value="#{plataInmatriculareController.selected.bloc}" title="#{bundle.EditPlataInmatriculareTitle_bloc}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_scara}" for="scara" />
+                    <h:inputText id="scara" value="#{plataInmatriculareController.selected.scara}" title="#{bundle.EditPlataInmatriculareTitle_scara}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_etaj}" for="etaj" />
+                    <h:inputText id="etaj" value="#{plataInmatriculareController.selected.etaj}" title="#{bundle.EditPlataInmatriculareTitle_etaj}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_apartament}" for="apartament" />
+                    <h:inputText id="apartament" value="#{plataInmatriculareController.selected.apartament}" title="#{bundle.EditPlataInmatriculareTitle_apartament}" />
+                    <h:outputLabel value="#{bundle.EditPlataInmatriculareLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{plataInmatriculareController.selected.id}" title="#{bundle.EditPlataInmatriculareTitle_id}" />
+                </h:panelGrid>
+                <h:commandLink action="#{plataInmatriculareController.update}" value="#{bundle.EditPlataInmatriculareSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditPlataInmatriculareViewLink}"/>
+                <br />
+                <h:commandLink action="#{plataInmatriculareController.prepareList}" value="#{bundle.EditPlataInmatriculareShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditPlataInmatriculareIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

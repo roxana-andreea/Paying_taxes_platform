@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewPlataPasaportTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_id}"/>
+                    <h:outputText value="#{plataPasaportController.selected.id}" title="#{bundle.ViewPlataPasaportTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_nume}"/>
+                    <h:outputText value="#{plataPasaportController.selected.nume}" title="#{bundle.ViewPlataPasaportTitle_nume}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_prenume}"/>
+                    <h:outputText value="#{plataPasaportController.selected.prenume}" title="#{bundle.ViewPlataPasaportTitle_prenume}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_prenume_tata}"/>
+                    <h:outputText value="#{plataPasaportController.selected.prenume_tata}" title="#{bundle.ViewPlataPasaportTitle_prenume_tata}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_prenume_mama}"/>
+                    <h:outputText value="#{plataPasaportController.selected.prenume_mama}" title="#{bundle.ViewPlataPasaportTitle_prenume_mama}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_cnp}"/>
+                    <h:outputText value="#{plataPasaportController.selected.cnp}" title="#{bundle.ViewPlataPasaportTitle_cnp}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_oras_natal}"/>
+                    <h:outputText value="#{plataPasaportController.selected.oras_natal}" title="#{bundle.ViewPlataPasaportTitle_oras_natal}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_judet_natal}"/>
+                    <h:outputText value="#{plataPasaportController.selected.judet_natal}" title="#{bundle.ViewPlataPasaportTitle_judet_natal}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_zi_nastere}"/>
+                    <h:outputText value="#{plataPasaportController.selected.zi_nastere}" title="#{bundle.ViewPlataPasaportTitle_zi_nastere}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_luna_nastere}"/>
+                    <h:outputText value="#{plataPasaportController.selected.luna_nastere}" title="#{bundle.ViewPlataPasaportTitle_luna_nastere}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_an_nastere}"/>
+                    <h:outputText value="#{plataPasaportController.selected.an_nastere}" title="#{bundle.ViewPlataPasaportTitle_an_nastere}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_oras_actual}"/>
+                    <h:outputText value="#{plataPasaportController.selected.oras_actual}" title="#{bundle.ViewPlataPasaportTitle_oras_actual}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_judet_actual}"/>
+                    <h:outputText value="#{plataPasaportController.selected.judet_actual}" title="#{bundle.ViewPlataPasaportTitle_judet_actual}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_strada}"/>
+                    <h:outputText value="#{plataPasaportController.selected.strada}" title="#{bundle.ViewPlataPasaportTitle_strada}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_nr_strada}"/>
+                    <h:outputText value="#{plataPasaportController.selected.nr_strada}" title="#{bundle.ViewPlataPasaportTitle_nr_strada}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_bloc}"/>
+                    <h:outputText value="#{plataPasaportController.selected.bloc}" title="#{bundle.ViewPlataPasaportTitle_bloc}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_scara}"/>
+                    <h:outputText value="#{plataPasaportController.selected.scara}" title="#{bundle.ViewPlataPasaportTitle_scara}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_etaj}"/>
+                    <h:outputText value="#{plataPasaportController.selected.etaj}" title="#{bundle.ViewPlataPasaportTitle_etaj}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_apartament}"/>
+                    <h:outputText value="#{plataPasaportController.selected.apartament}" title="#{bundle.ViewPlataPasaportTitle_apartament}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_inaltime}"/>
+                    <h:outputText value="#{plataPasaportController.selected.inaltime}" title="#{bundle.ViewPlataPasaportTitle_inaltime}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_culoare_ochi}"/>
+                    <h:outputText value="#{plataPasaportController.selected.culoare_ochi}" title="#{bundle.ViewPlataPasaportTitle_culoare_ochi}"/>
+                    <h:outputText value="#{bundle.ViewPlataPasaportLabel_tip_pasaport}"/>
+                    <h:outputText value="#{plataPasaportController.selected.tip_pasaport}" title="#{bundle.ViewPlataPasaportTitle_tip_pasaport}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{plataPasaportController.destroyAndView}" value="#{bundle.ViewPlataPasaportDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewPlataPasaportEditLink}"/>
+                <br />
+                <h:commandLink action="#{plataPasaportController.prepareCreate}" value="#{bundle.ViewPlataPasaportCreateLink}" />
+                <br />
+                <h:commandLink action="#{plataPasaportController.prepareList}" value="#{bundle.ViewPlataPasaportShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewPlataPasaportIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
